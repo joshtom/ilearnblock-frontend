@@ -1,0 +1,14 @@
+// Global styles
+@import "./global";
+
+// Core Styles
+@import "./core/variables";
+@import "./core/breakpoint";
+@import "./core/flexbox";
+@import "./core/typography";
+
+// Layout styles
+@import "./layout/default";
+
+// Pages styles
+@import "./pages/index";

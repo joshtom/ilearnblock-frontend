@@ -1,0 +1,140 @@
+.default-layout {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100px;
+    background-color: $dark;
+    color: $white;
+    padding: 0 $spacer-6;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    .logo {
+      @include flex-basis(35%);
+      a {
+        @include flexbox;
+      }
+      h1 {
+        font-weight: $w-900;
+        margin-left: $spacer-2;
+        color: $secondaryLight;
+      }
+    }
+    .links {
+      @include flexbox;
+      list-style-type: none;
+      @include align-self(stretch);
+      @include align-items(center);
+
+      li {
+        color: $dark;
+        margin-right: $spacer-3;
+        height: 99%;
+        @include flexbox;
+        position: relative;
+
+        & > * {
+          margin: auto;
+        }
+        &.active {
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            border-bottom: 3px solid $white;
+            width: 100%;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $white;
+          &.nuxt-link-exact-active {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .ctaBtn {
+      &--register {
+        background-color: $primary;
+        color: $white;
+        padding: $spacer-3 $spacer-4;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-left: $spacer-4;
+        cursor: pointer;
+        &:hover {
+          background-color: $white;
+          color: $primary;
+        }
+      }
+    }
+  }
+  .container {
+    background: white;
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+  }
+  footer {
+    background-color: $dark;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    min-height: 350px;
+    padding: $spacer-9 $spacer-10 $spacer-2 $spacer-10;
+    // @include flexbox;
+    // @include justify-content(center);
+    // @include align-items(center);
+    .a-row {
+      background-color: white;
+      width: 100%;
+    }
+    .footer--link {
+      // background-color: red;
+      padding: 10px 0;
+
+      &-content {
+        @include flexbox;
+        @include flex-direction(column);
+        margin-top: $spacer-2;
+        a {
+          color: $white;
+          margin-top: $spacer-2;
+          word-wrap: break-word;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .footer-logo {
+      @include flexbox;
+      h1 {
+        font-weight: $w-900;
+        margin-left: $spacer-2;
+        color: $secondaryLight;
+      }
+    }
+
+    h3 {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+  .copyright {
+    width: 100%;
+    height: 50px;
+    background-color: $primary;
+    @include d-flex-center;
+    p {
+      margin: auto;
+    }
+  }
+}

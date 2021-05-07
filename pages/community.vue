@@ -1,6 +1,6 @@
 <template>
-  <div class="index-page">
-    <h2>Home page</h2>
+  <div>
+    <h1>THis is the community</h1>
   </div>
 </template>
 

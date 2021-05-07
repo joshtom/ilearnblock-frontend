@@ -1,0 +1,11 @@
+.text-primary {
+  color: $primary;
+  &:hover {
+    opacity: 0.9;
+    color: $primary;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}
