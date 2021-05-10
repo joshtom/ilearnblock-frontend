@@ -1,3 +1,32 @@
+h1,
+h2,
+p,
+a {
+  // Font minimum, preferred and maximum value
+  font-size: clamp(var(--min), var(--val), var(--max));
+}
+
+// Font size variables
+h1 {
+  --min: 1.7em;
+  --val: 5vw;
+  --max: 28px;
+}
+h2 {
+  --min: 1.5em;
+  --val: 4vw;
+  --max: 24px;
+}
+
+p {
+  --min: 1em;
+  --val: 2.5vw;
+  --max: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
 .text-primary {
   color: $primary;
   &:hover {
@@ -6,6 +35,30 @@
   }
 }
 
+.text-secondary {
+  color: $secondary;
+  &:hover {
+    opacity: 0.9;
+    color: $secondary;
+  }
+}
+
 .text-bold {
   font-weight: bold;
+}
+
+.text-danger {
+  color: red;
+}
+.text-danger-dark {
+  color: $danger;
+}
+.text-gray-200 {
+  color: $gray-200;
+}
+.text-gray-300 {
+  color: $gray-300;
+}
+.text-gray-400 {
+  color: $gray-400;
 }
