@@ -10,7 +10,7 @@ a {
 h1 {
   --min: 1.7em;
   --val: 5vw;
-  --max: 28px;
+  --max: 30px;
 }
 h2 {
   --min: 1.5em;
@@ -48,10 +48,10 @@ p {
 }
 
 .text-danger {
-  color: red;
+  color: $danger;
 }
 .text-danger-dark {
-  color: $danger;
+  color: $danger-dark;
 }
 .text-gray-200 {
   color: $gray-200;
@@ -61,4 +61,8 @@ p {
 }
 .text-gray-400 {
   color: $gray-400;
+}
+
+.text-gray-500 {
+  color: $gray-500;
 }

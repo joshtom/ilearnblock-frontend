@@ -1,11 +1,24 @@
 <template>
-  <div class="utilities--line-text">
-    <span><slot> </slot></span>
+  <div
+    class="utilities--line-text"
+    :style="{ 'border-bottom': `1px solid ${lineColor}` }"
+  >
+    <span :style="{ background: `${bgColor}` }"><slot> </slot></span>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["bg", "line"],
+  computed: {
+    bgColor() {
+      return `${this.bg}`;
+    },
+    lineColor() {
+      return `${this.line}`;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -18,12 +31,15 @@ $gray-300: #828282;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid $gray-100;
-  height: 20px;
-  margin: $spacer-6 auto $spacer-6 auto;
+  height: 35px;
+  //   margin: $spacer-6 auto $spacer-6 auto;
 
   & > span {
-    background: white;
     padding: 0px 30px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
   }
 }
 </style>

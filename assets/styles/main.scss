@@ -5,7 +5,10 @@
 @import "./core/variables";
 @import "./core/breakpoint";
 @import "./core/flexbox";
+@import "./core/mixins";
 @import "./core/typography";
+@import "./core/reusables";
+@import "./core/mixins";
 
 // Layout styles
 @import "./layout/default";
@@ -15,3 +18,6 @@
 
 // Components / CARDS
 @import "./components/cards/course";
+@import "./components/cards/market";
+@import "./components/cards/glossary";
+@import "./components/cards/testimonial";

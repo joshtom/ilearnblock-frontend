@@ -1,0 +1,14 @@
+.btn-link {
+  background-color: $primary;
+  color: $white;
+  padding: $spacer-3 $spacer-6;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    color: $white;
+    border: 0.4px solid $primary;
+    color: $primary;
+    background-color: transparent;
+  }
+}

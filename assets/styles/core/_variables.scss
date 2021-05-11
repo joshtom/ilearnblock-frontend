@@ -3,16 +3,17 @@
 **/
 
 // gray
-$gray-50: #f2f2f2;
+$gray-50: #f9f9f9;
 $gray-70: #f4f6f8;
 $gray-100: #e0e0e0;
 $gray-200: #bdbdbd;
 $gray-300: #828282;
 $gray-400: #4f4f4f;
-$gray-500: #333333;
+$gray-500: #767679;
+$gray-600: #141519;
 
 // yellow
-$yellow-20: #fdebce;
+$yellow-20: #110f0c;
 $yellow-50: #fffbeb;
 $yellow-100: #fef3c7;
 $yellow-200: #fde68a;
@@ -25,6 +26,7 @@ $green-50: #ecfdf5;
 $green-100: #d1fae5;
 $green-200: #a7f3d0;
 $green-300: #6fcf97;
+$green-400: #eff7ff;
 
 //  primary, success, danger and info
 
@@ -33,9 +35,11 @@ $secondary: #004ac2;
 $secondaryLight: #0061ff;
 $danger: #eb5757;
 $danger-light: #f9c8c8;
-$danger-dark: #c91818;
-$success: #36a162;
+$danger-dark: #e0474e;
+// $success: #36a162;
+$success: #05b592;
 $info: #ff9100;
+$important: #c4a2fc;
 
 // Commmon
 $white: #ffffff;

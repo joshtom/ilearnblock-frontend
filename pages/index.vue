@@ -118,14 +118,127 @@
       </div>
     </div>
     <div class="indexpage__separate">
-      <linetext>
-        <img src="~/assets/images/logo2.png" alt="" width="40" height="40" />
+      <linetext bg="white">
+        <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
       </linetext>
     </div>
     <div class="indexpage__courses">
       <h1>Courses</h1>
       <div class="indexpage__courses--container">
         <Course />
+      </div>
+    </div>
+    <div class="indexpage__categories">
+      <linetext bg="#141519" line="#767679">
+        <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
+      </linetext>
+      <h1 class="text-white">Categories</h1>
+      <div class="indexpage__categories--container">
+        <categories-card> </categories-card>
+      </div>
+    </div>
+    <div class="indexpage__market">
+      <h1 class="indexpage__market--title">Market updates</h1>
+      <p class="indexpage__market--subtitle">
+        Get latest updates on cryptocurrency in the crypto-space
+      </p>
+      <div class="indexpage__market--container">
+        <div class="cards">
+          <market-card> </market-card>
+          <market-card> </market-card>
+          <market-card> </market-card>
+        </div>
+        <div class="btn">
+          <nuxt-link to="/more-feedbacks" class="btn-link">
+            View more feedbacks
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
+    <div class="indexpage__measurable">
+      <h1 class="indexpage__measurable--title">Providing Measurable Value</h1>
+      <p class="indexpage__measurable--subtitle">
+        There are many of passages of Lorem Ispum available, but the majority
+        have suffered alterations in some form, by inject humor
+      </p>
+      <div class="indexpage__measurable--container">
+        <section>
+          <img
+            src="~/assets/icons/school.svg"
+            alt="image-here"
+            width="88.883"
+            height="75.558"
+          />
+          <h2>2,400+</h2>
+          <p>Online course</p>
+        </section>
+        <section>
+          <img
+            src="~/assets/icons/man.svg"
+            alt="image-here"
+            width="64.054"
+            height="72"
+          />
+          <h2>99,854+</h2>
+          <p>Enroll student</p>
+        </section>
+        <section>
+          <img
+            src="~/assets/icons/mortarboard2.svg"
+            alt="image-here"
+            width="78.607"
+            height="74.337"
+          />
+          <h2>650+</h2>
+          <p>Expert Instructor</p>
+        </section>
+        <section>
+          <img
+            src="~/assets/icons/man.svg"
+            alt="image-here"
+            width="64.054"
+            height="72"
+          />
+          <h2>1820+</h2>
+          <p>Profile Review</p>
+        </section>
+      </div>
+    </div>
+    <div class="indexpage__glossary">
+      <h1 class="indexpage__glossary--title">Glossary</h1>
+      <p class="indexpage__glossary--subtitle">
+        Understand key terms in cryptocurrency
+      </p>
+      <div class="indexpage__glossary--container">
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+        <glossary-card> </glossary-card>
+      </div>
+
+      <div class="btn">
+        <nuxt-link to="/glossary" class="btn-link">
+          View more Glossary</nuxt-link
+        >
+      </div>
+    </div>
+
+    <div class="indexpage__testimonial">
+      <h1 class="indexpage__testimonial--title">Student's feedback</h1>
+      <p class="indexpage__testimonial--subtitle">Read our latest news</p>
+      <div class="indexpage__testimonial--container">
+        <testimonial-card> </testimonial-card>
+        <testimonial-card> </testimonial-card>
+      </div>
+
+      <div class="btn">
+        <nuxt-link to="/testimonial" class="btn-link">
+          View more Feedbacks</nuxt-link
+        >
       </div>
     </div>
   </div>
@@ -136,6 +249,10 @@ export default {
   components: {
     Linetext: () => import("~/components/utilities/linetext"),
     Course: () => import("~/components/cards/course"),
+    "categories-card": () => import("~/components/cards/categories"),
+    "market-card": () => import("~/components/cards/market"),
+    "glossary-card": () => import("~/components/cards/glossary"),
+    "testimonial-card": () => import("~/components/cards/testimonial"),
   },
 };
 </script>

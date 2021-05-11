@@ -1,0 +1,23 @@
+.glossary__card {
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: -1px 1px 18px 3px $gray-100;
+  border: 1px solid transparent;
+  transition: all 200ms ease-in-out;
+  @include flexbox;
+  display: inline-flex;
+  margin: $spacer-3;
+
+  p {
+    color: black;
+    margin: auto;
+    font-weight: bold;
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+    border: 1px solid $gray-100;
+  }
+}
