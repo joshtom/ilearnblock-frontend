@@ -1,6 +1,13 @@
 <template>
   <div class="course__card">
-    <div class="course__card--header"></div>
+    <div class="course__card--header">
+      <img
+        src="~/assets/images/course1.png"
+        alt="course1-image"
+        width="100%"
+        height="100%"
+      />
+    </div>
     <div class="course__card--body">
       <p>Intro to <b>Bitcoin</b></p>
       <div class="course-type">

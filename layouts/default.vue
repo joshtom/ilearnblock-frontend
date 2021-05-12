@@ -111,7 +111,7 @@
           </div>
         </a-col>
       </a-row>
-      <a-row type="flex" justify="center" align="center">
+      <a-row type="flex" justify="center" align="middle">
         <a-col>
           <div class="footer-logo">
             <img
