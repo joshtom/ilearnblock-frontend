@@ -3,9 +3,13 @@
   margin: $spacer-3;
   padding: $spacer-6;
   width: 50%;
-  height: 300px;
+  min-height: 300px;
   border-radius: 8px;
   @include d-flex-center(center, center, column);
+
+  @include bp-sm {
+    width: 100%;
+  }
   p {
     text-align: center;
   }

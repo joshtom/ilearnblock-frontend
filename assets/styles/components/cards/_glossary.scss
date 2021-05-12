@@ -1,4 +1,4 @@
-.glossary__card {
+.glossaryContainer {
   width: 200px;
   height: 80px;
   background-color: white;
@@ -6,18 +6,23 @@
   box-shadow: -1px 1px 18px 3px $gray-100;
   border: 1px solid transparent;
   transition: all 200ms ease-in-out;
-  @include flexbox;
-  display: inline-flex;
   margin: $spacer-3;
-
-  p {
-    color: black;
-    margin: auto;
-    font-weight: bold;
+  .glossary__card {
+    width: 100%;
+    height: 100%;
+    @include flexbox;
+    p {
+      color: black;
+      margin: auto;
+      font-weight: bold;
+    }
   }
   &:hover {
     transform: scale(1.1);
     box-shadow: none;
     border: 1px solid $gray-100;
+  }
+  @include bp-sm {
+    width: 100%;
   }
 }

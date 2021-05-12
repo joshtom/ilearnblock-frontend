@@ -403,8 +403,12 @@
       margin: auto;
       margin-bottom: $spacer-6;
 
-      @include bp-sm {
+      @include bp-md {
         width: 100%;
+      }
+      @include bp-sm {
+        // width: 100%;
+        // @include flex-wrap(nowrap);
       }
     }
     .btn {
@@ -420,7 +424,13 @@
   &__testimonial {
     &--container {
       @include flex-wrap(nowrap);
-      padding: 0 $spacer-10;
+      @include bp-md {
+        width: 100%;
+        padding: $spacer-2;
+      }
+      @include bp-sm {
+        @include flex-wrap(wrap);
+      }
     }
   }
 }
