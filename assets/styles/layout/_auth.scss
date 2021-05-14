@@ -1,0 +1,61 @@
+.auth-layout {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+    @include flexbox;
+    .row {
+      width: 50%;
+      height: 100%;
+      &:nth-child(1) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("~/assets/images/intro2.svg");
+        background-size: contain;
+        background-color: black;
+        padding: $spacer-6;
+        .header {
+          text-align: center;
+        }
+        .body {
+          //   background-color: blue;
+          height: 80%;
+          @include flexbox;
+          @include justify-content(center);
+          //   @include align-items(center);
+          @include flex-direction(column);
+          h1 {
+            position: relative;
+            color: $white;
+            font-weight: $w-900;
+            font-size: 72px;
+            margin-bottom: $spacer-4;
+            // width: 85%;
+
+            &::before {
+              position: absolute;
+              content: "";
+              border-bottom: 2px solid $primary;
+              bottom: 0;
+              width: 50%;
+            }
+          }
+          p {
+            color: $white;
+            font-weight: bold;
+          }
+        }
+      }
+      &:nth-child(2) {
+        background-color: $white;
+        width: 50%;
+        height: 100%;
+      }
+    }
+  }
+}
