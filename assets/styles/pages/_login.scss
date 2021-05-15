@@ -1,0 +1,41 @@
+.login {
+  margin: auto;
+  width: 60%;
+
+  &__logo {
+    img {
+      text-align: center;
+      margin: auto;
+      margin-bottom: $spacer-4;
+    }
+  }
+  h1.title {
+    font-weight: bold;
+    margin-bottom: $spacer-1;
+  }
+
+  .btn-google {
+    padding: $spacer-3 !important;
+    // border-radius: 16px;
+    margin-top: $spacer-7;
+
+    img {
+      margin-right: $spacer-3;
+    }
+  }
+  .form {
+    &__bottom {
+      @include flexbox;
+      @include justify-content(space-between);
+      .forgotPassword-link {
+        font-weight: bold;
+        color: $secondary;
+      }
+    }
+  }
+
+  @include bp-lg {
+    width: 100%;
+    padding: $spacer-5;
+  }
+}

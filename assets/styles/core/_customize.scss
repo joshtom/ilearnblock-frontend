@@ -1,0 +1,90 @@
+/* OVERWRITE RULES FOR ANT DESIGN
+! Do not update except there is an update in the design!
+*/
+.ant-input,
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled),
+.ant-input-number {
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid $gray-200;
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: 1px solid $primary;
+    box-shadow: none;
+  }
+}
+
+.ant-input-number {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ant-input-number-input-wrap {
+    width: 98%;
+  }
+}
+
+.ant-form-item {
+  margin-bottom: 7px;
+}
+
+.ant-form-item-label > label {
+  color: $gray-400;
+}
+.ant-form-item-required::before {
+  display: none;
+}
+
+.ant-form-item-label > label::after {
+  display: none;
+}
+
+.ant-spin-text {
+  color: #999;
+}
+
+.ant-checkbox {
+  border-color: $secondary;
+}
+.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox-disabled .ant-checkbox-inner {
+  background-color: $secondary;
+  border: 1px solid $secondary;
+}
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner,
+.ant-checkbox-checked::after {
+  border-color: $secondary;
+}
+
+.ant-modal-content {
+  @media screen and (max-width: $sm) {
+    margin: 13px;
+  }
+}
+.ant-spin-dot-item {
+  background-color: $primary;
+}
+
+.ant-input-number-handler-wrap {
+  display: none;
+}
+
+.ant-tooltip {
+  max-width: 300px;
+}
+
+.ant-tooltip-arrow {
+  @include bp-sm {
+    display: none;
+  }
+}
+
+// .ant-input:placeholder-shown {
+//   text-overflow: ellipsis;
+//   padding-bottom: 9px;
+// }
+
+/* END OF OVERWRITE RULES FOR ANT DESIGN */

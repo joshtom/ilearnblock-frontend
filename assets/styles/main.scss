@@ -9,6 +9,7 @@
 @import "./core/typography";
 @import "./core/reusables";
 @import "./core/mixins";
+@import "./core/customize";
 
 // Layout styles
 @import "./layout/default";
@@ -16,6 +17,7 @@
 
 // Pages styles
 @import "./pages/index";
+@import "./pages/login";
 
 // Components / CARDS
 @import "./components/cards/course";

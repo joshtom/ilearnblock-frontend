@@ -8,8 +8,8 @@
         height="50px"
       />
     </nuxt-link>
-    <h1 class="title text-secondary">Login</h1>
-    <p class="subtitle">Sign into your account</p>
+    <h1 class="title text-secondary">Sign Up</h1>
+    <p class="subtitle">Sign up to create an account</p>
     <Button class="btn-outline w-full btn-google">
       <img
         src="~/assets/icons/google.svg"
@@ -19,13 +19,27 @@
       />
       Sign in with Google</Button
     >
-    <auth-text> Or login with email </auth-text>
+    <auth-text> Or sign up with email </auth-text>
     <div class="form">
       <a-form layout="vertical" style="" @submit="handleSubmit">
-        <a-form-item label="Username">
+        <a-form-item label="Name">
+          <a-input
+            type="text"
+            placeholder="Enter full name"
+            v-decorator="[
+              'name',
+              {
+                rules: [{ required: true, message: 'Name is required!' }],
+              },
+            ]"
+            autocomplete="name"
+          />
+        </a-form-item>
+
+        <a-form-item label="Email">
           <a-input
             type="email"
-            placeholder="email@example.com"
+            placeholder="example@email.com"
             v-decorator="[
               'email',
               {
@@ -35,6 +49,7 @@
             autocomplete="email"
           />
         </a-form-item>
+
         <a-form-item label="Password">
           <a-input-password
             type="password"
@@ -45,14 +60,32 @@
                 rules: [{ required: true, message: 'Password is required!' }],
               },
             ]"
-            autocomplete="current-password"
+            autocomplete="password"
+          />
+        </a-form-item>
+
+        <a-form-item label="Confirm Password">
+          <a-input-password
+            type="password"
+            placeholder="Repeat password"
+            v-decorator="[
+              'confirm-password',
+              {
+                rules: [
+                  { required: true, message: 'Confirm Password is required!' },
+                ],
+              },
+            ]"
+            autocomplete="confirm-password"
           />
           <a-form-item> </a-form-item>
           <div class="form__bottom">
-            <a-checkbox @change="onChange"> Remember me </a-checkbox>
-            <NuxtLink to="/forgot-password" class="forgotPassword-link">
-              Forgot Password?
-            </NuxtLink>
+            <a-checkbox @change="onChange">
+              I agree to the
+              <NuxtLink to="/forgot-password" class="forgotPassword-link">
+                Terms and Conditions?
+              </NuxtLink></a-checkbox
+            >
           </div>
         </a-form-item>
         <a-form-item>
@@ -64,9 +97,9 @@
         </a-form-item>
       </a-form>
       <p>
-        Not registered yet?
-        <nuxt-link to="/register" class="text-secondary text-bold">
-          Create an Account
+        Already have an account?
+        <nuxt-link to="/login" class="text-secondary text-bold">
+          Login
         </nuxt-link>
       </p>
     </div>

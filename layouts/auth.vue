@@ -3,12 +3,14 @@
     <div class="container">
       <div class="row">
         <div class="header">
-          <img
-            src="~/assets/images/logo.png"
-            alt="ilearnbock-logo"
-            width="70px"
-            height="70px"
-          />
+          <nuxt-link to="/">
+            <img
+              src="~/assets/images/logo.png"
+              alt="ilearnbock-logo"
+              width="70px"
+              height="70px"
+            />
+          </nuxt-link>
         </div>
         <div class="body">
           <h1>Learn amazing skills in Blockchain.</h1>
