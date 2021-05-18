@@ -18,6 +18,13 @@
 // Pages styles
 @import "./pages/index";
 @import "./pages/login";
+@import "./pages/about";
+@import "./pages/resetPassword";
+
+// Components
+
+@import "./components/measurable";
+@import "./components/testimonial";
 
 // Components / CARDS
 @import "./components/cards/course";

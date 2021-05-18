@@ -1,0 +1,56 @@
+.testimonial {
+  padding: $spacer-10 $spacer-4 $spacer-10 $spacer-4;
+  background-color: $white;
+  &--title {
+    position: relative;
+    color: $secondary;
+    font-weight: bold;
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $secondary;
+      margin: auto;
+      height: 4px;
+      width: 50px;
+      margin: auto;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+    }
+  }
+  &--subtitle {
+    text-align: center;
+    margin-top: $spacer-6;
+    margin-bottom: $spacer-4;
+    text-align: center;
+    width: 50%;
+    margin: $spacer-5 auto;
+  }
+  &--container {
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-wrap(nowrap);
+    width: 70%;
+    margin: auto;
+    margin-bottom: $spacer-6;
+
+    @include bp-md {
+      width: 100%;
+      padding: $spacer-2;
+    }
+    @include bp-sm {
+      @include flex-wrap(wrap);
+    }
+  }
+  .btn {
+    @include flexbox;
+    padding: $spacer-1;
+    height: auto;
+
+    & > * {
+      margin: auto;
+    }
+  }
+}

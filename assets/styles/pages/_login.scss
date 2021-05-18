@@ -3,10 +3,14 @@
   width: 60%;
 
   &__logo {
+    display: none;
     img {
       text-align: center;
       margin: auto;
       margin-bottom: $spacer-4;
+    }
+    @include bp-sm {
+      display: block;
     }
   }
   h1.title {
