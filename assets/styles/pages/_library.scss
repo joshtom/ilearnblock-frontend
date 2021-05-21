@@ -1,0 +1,75 @@
+.library {
+  &__hero {
+    width: 100%;
+    height: 350px;
+    background-color: #275e6f;
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-direction(column);
+    padding: $spacer-10;
+
+    h1 {
+      font-weight: bolder;
+      font-size: 60px;
+      color: $white;
+    }
+    article {
+      width: 40%;
+      color: $white;
+      line-height: 1.8;
+    }
+  }
+  &__intro {
+    @include d-flex-center(center, center, row, wrap);
+    padding: $spacer-10;
+    .card {
+      width: 35%;
+      background-color: $white;
+      @include b-shadow-primary;
+      // @include d-flex-center(center, center, column);
+      padding: $spacer-5;
+      border-top: 5px solid $primary;
+      margin-right: $spacer-5;
+      // height: 300px;
+
+      ul {
+        list-style-type: none;
+        margin-bottom: $spacer-5;
+
+        li {
+          margin-bottom: $spacer-2;
+          font-weight: $w-600;
+        }
+      }
+
+      a {
+        justify-self: flex-start;
+      }
+    }
+    &--video {
+      background-color: #275e6f;
+      padding: 0;
+      height: 300px;
+      width: 50%;
+      //   img {
+      //     width: 100px;
+      //     height: 100px;
+      //   }
+    }
+  }
+  &__freeCourses {
+    padding: $spacer-8;
+    .container {
+      @include flexbox;
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+      margin: $spacer-6 0;
+      & > * {
+        margin: $spacer-3;
+      }
+    }
+    .ant-pagination {
+      text-align: center;
+    }
+  }
+}

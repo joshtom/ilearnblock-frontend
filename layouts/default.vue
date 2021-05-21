@@ -13,9 +13,6 @@
         </nuxt-link>
       </div>
       <ul class="links">
-        <li class="link" :class="{ active: subIsActive('/') }">
-          <nuxt-link to="/#" exact>Home</nuxt-link>
-        </li>
         <li class="link" :class="{ active: subIsActive('/skills') }">
           <nuxt-link to="/skills">Skills</nuxt-link>
         </li>

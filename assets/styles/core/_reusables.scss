@@ -12,3 +12,19 @@
     background-color: transparent;
   }
 }
+
+// Button rule
+.btn-primary {
+  background: $primary;
+  border-radius: 4px;
+  color: $white;
+  padding: 0.8rem $spacer-9;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &:focus-within {
+    color: $white;
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+}
