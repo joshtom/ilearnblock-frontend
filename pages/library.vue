@@ -88,6 +88,17 @@
         @change="onChange"
       />
     </div>
+
+    <categories />
+
+    <linetext
+      bg="#ffffff"
+      line="#eee"
+      style="margin-top: 20px"
+      class="linetext-bottom"
+    >
+      <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
+    </linetext>
   </div>
 </template>
 
@@ -102,6 +113,7 @@ export default {
   components: {
     Course: () => import("~/components/cards/course"),
     headText: () => import("~/components/utilities/headingtext"),
+    linetext: () => import("~/components/utilities/linetext"),
   },
   methods: {
     onChange(value) {

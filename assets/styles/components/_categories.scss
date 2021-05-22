@@ -1,0 +1,40 @@
+.cat {
+  &__categories {
+    background-color: $gray-600;
+    width: 100%;
+    min-height: 300px;
+    padding: $spacer-5 $spacer-10;
+    h1 {
+      position: relative;
+      color: $white;
+      font-weight: bold;
+      text-align: center;
+      margin-top: $spacer-10;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $white;
+        margin: auto;
+        height: 4px;
+        width: 50px;
+        margin: auto;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+      }
+    }
+    &--container {
+      margin-top: $spacer-6;
+      min-height: 90px;
+      width: 100%;
+      @include flexbox;
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+    }
+    .ant-pagination {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}

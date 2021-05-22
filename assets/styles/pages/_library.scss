@@ -1,4 +1,5 @@
 .library {
+  margin-bottom: $spacer-10;
   &__hero {
     width: 100%;
     height: 350px;
@@ -71,5 +72,10 @@
     .ant-pagination {
       text-align: center;
     }
+  }
+  .linetext-bottom {
+    // padding: $spacer-10;
+    width: 80%;
+    margin: auto;
   }
 }

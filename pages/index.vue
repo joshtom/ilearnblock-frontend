@@ -136,25 +136,9 @@
         />
       </div>
     </div>
-    <div class="indexpage__categories">
-      <linetext bg="#141519" line="#767679">
-        <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
-      </linetext>
-      <h1 class="text-white">Categories</h1>
-      <div class="indexpage__categories--container">
-        <categories-card v-for="cat of getCategory" :key="cat.title">
-          {{ cat.title }}
-        </categories-card>
-      </div>
-      <a-pagination
-        v-model="current"
-        :defaultCurrent="3"
-        :total="category.length"
-        :defaultPageSize="3"
-        show-less-items
-        @change="onChange"
-      />
-    </div>
+
+    <categories />
+
     <div class="indexpage__market">
       <h1 class="indexpage__market--title">Market updates</h1>
       <p class="indexpage__market--subtitle">
@@ -205,41 +189,13 @@ export default {
   components: {
     Linetext: () => import("~/components/utilities/linetext"),
     Course: () => import("~/components/cards/course"),
-    "categories-card": () => import("~/components/cards/categories"),
     "market-card": () => import("~/components/cards/market"),
     "glossary-card": () => import("~/components/cards/glossary"),
     "measurable-value": () => import("~/components/measurableValue"),
     testimonial: () => import("~/components/testimonial"),
   },
   data() {
-    return {
-      current: 1,
-      minValue: 0,
-      maxValue: 4,
-      numEachPage: 4,
-      category: [
-        { title: "Cryptography" },
-        { title: "Community Management" },
-        { title: "Blockchain Development" },
-        { title: "Token e-commerce" },
-        { title: "Crypto currency trading" },
-        { title: "Technical Analysis" },
-        { title: "Defi" },
-        { title: "Economics" },
-        { title: "Wallet" },
-      ],
-    };
-  },
-  methods: {
-    onChange(value) {
-      this.minValue = (value - 1) * this.numEachPage;
-      this.maxValue = value * this.numEachPage;
-    },
-  },
-  computed: {
-    getCategory() {
-      return this.category.slice(this.minValue, this.maxValue);
-    },
+    return {};
   },
 };
 </script>

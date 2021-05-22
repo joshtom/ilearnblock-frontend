@@ -7,7 +7,8 @@ import {
   Pagination,
   Form,
   Input,
-  Checkbox
+  Checkbox,
+  Rate
 } from "ant-design-vue";
 
 Vue.use(Button);
@@ -18,3 +19,4 @@ Vue.use(Pagination);
 Vue.use(Form);
 Vue.use(Input);
 Vue.use(Checkbox);
+Vue.use(Rate);
