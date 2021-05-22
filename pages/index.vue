@@ -1,19 +1,13 @@
 <template>
   <div class="indexpage">
     <div class="indexpage__banner">
-      <client-only>
-        <carousel
-          :per-page="1"
-          :mouse-drag="true"
-          :loop="true"
-          autoPlayDirection="backward"
-          :autoplay="true"
-        >
-          <slide class="indexpage__banner--slide"> Slide 1 Content </slide>
-          <slide class="indexpage__banner--slide"> Slide 2 Content </slide>
-          <slide class="indexpage__banner--slide"> Slide 2 Content </slide>
-        </carousel>
-      </client-only>
+      <div class="wrapper">
+        <h1>
+          Cryptocurrency for Beginners - The Leading Crypto Education Platform
+        </h1>
+        <p>Your Expert Guide Into The World Of Cryptocurrencies</p>
+        <nuxt-link to="/about" class="btn-primary"> Learn more </nuxt-link>
+      </div>
     </div>
     <div class="indexpage__intro">
       <a-row>

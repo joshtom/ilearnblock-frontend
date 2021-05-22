@@ -2,42 +2,53 @@
   &__banner {
     width: 100%;
     min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("~/assets/images/Banner.jpg") center center;
+    background-size: cover;
+    @include flexbox;
+    @include align-items(center);
+    padding: $spacer-7;
 
-    &--slide {
-      color: black;
-      height: 80vh;
+    .wrapper {
+      width: 55%;
+      h1 {
+        color: $white;
+        font-weight: bolder;
+        font-size: 3.5rem;
 
-      &:nth-child(1) {
-        background-color: aqua;
+        @include bp-md {
+          font-size: 2.5rem;
+        }
+        @include bp-sm {
+          font-size: 2rem;
+        }
       }
-      &:nth-child(2) {
-        background-color: pink;
+      p {
+        color: $white;
+        margin-bottom: $spacer-8;
+        font-size: 24px;
+
+        @include bp-sm {
+          font-size: 1.2rem;
+          margin-top: $spacer-2;
+        }
       }
-      &:nth-child(3) {
-        background-color: gray;
+      a.btn-primary {
+        font-weight: $w-600;
+        &:hover {
+          background-color: $white;
+          color: $primary;
+          opacity: 1;
+        }
       }
     }
 
-    .VueCarousel-pagination {
-      text-align: left !important;
-      padding: 0;
-      position: absolute;
-      bottom: 0;
+    @include bp-lg {
+      min-height: 50vh;
+      .wrapper {
+        width: 100%;
+      }
     }
-    // Custom fade effect
-    // .VueCarousel-inner {
-    //   transition: transform 137.333ms ease 0ms !important;
-    // }
-
-    // .VueCarousel-slide {
-    //   opacity: 0 !important;
-    //   flex-basis: 0;
-    // }
-
-    // .VueCarousel-slide-active {
-    //   transition: all 0.5s !important;
-    //   opacity: 1 !important;
-    // }
   }
   &__intro {
     @include flexbox;
