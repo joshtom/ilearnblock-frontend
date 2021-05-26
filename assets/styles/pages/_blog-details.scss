@@ -4,11 +4,22 @@
   width: 60%;
   margin: auto;
 
+  @include bp-mdlg {
+    width: 75%;
+  }
+  @include bp-sm {
+    width: 85%;
+  }
+
   &--container {
     h1.title {
       font-weight: $w-700;
       font-size: 3rem;
       line-height: 1.3;
+
+      @include bp-md {
+        font-size: 1.5rem;
+      }
     }
     p.author {
       margin: $spacer-4 0;
@@ -44,6 +55,10 @@
         padding: 0 $spacer-5;
         @include flexbox;
         @include flex-wrap(wrap);
+
+        @include bp-lg {
+          width: 100%;
+        }
 
         .image {
           width: 100px;
