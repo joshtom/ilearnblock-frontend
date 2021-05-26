@@ -1,0 +1,14 @@
+.blog {
+  padding: $spacer-10 10rem;
+
+  @include bp-lg {
+    padding: $spacer-10 6rem;
+  }
+  @include bp-sm {
+    padding: $spacer-10 2rem;
+  }
+
+  &--container {
+    margin-bottom: $spacer-6 !important;
+  }
+}

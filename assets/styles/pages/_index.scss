@@ -2,8 +2,9 @@
   &__banner {
     width: 100%;
     min-height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("~/assets/images/Banner.jpg") center center;
+    // background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    //   url("~/assets/images/Banner.jpg") center center;
+    background: url("~/assets/images/Banner.jpg") center center;
     background-size: cover;
     @include flexbox;
     @include align-items(center);
