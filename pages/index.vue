@@ -167,7 +167,7 @@
           width="100"
           height="100"
         />
-        <h3>Bitcoin</h3>
+        <h3>Ethereum</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           maximus libero in dapibus consequat.
@@ -197,7 +197,7 @@
           width="100"
           height="100"
         />
-        <h3>Bitcoin</h3>
+        <h3>Binance</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           maximus libero in dapibus consequat.
@@ -212,7 +212,7 @@
           width="100"
           height="100"
         />
-        <h3>Bitcoin</h3>
+        <h3>Dodgecoin</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           maximus libero in dapibus consequat.
