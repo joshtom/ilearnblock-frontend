@@ -111,23 +111,112 @@
         />
       </div>
     </div>
-    <div class="indexpage__separate">
-      <linetext bg="white">
-        <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
-      </linetext>
-    </div>
-    <div class="indexpage__courses">
-      <h1>Courses</h1>
-      <div class="indexpage__courses--container">
-        <Course />
+    <div class="course-container">
+      <div class="indexpage__separate">
+        <linetext bg="#f7f7f7">
+          <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
+        </linetext>
       </div>
-      <div class="indexpage__courses--pagination">
-        <a-pagination
-          v-model="current"
-          :total="50"
-          show-less-items
-          @change="onChange"
+      <client-only>
+        <br />
+        <headingtext> Courses </headingtext>
+        <br />
+        <carousel
+          :per-page="1"
+          :mouse-drag="true"
+          :paginationEnabled="false"
+          :navigationEnabled="true"
+          :touch-drag="true"
+          :per-page-custom="[
+            [1024, 5],
+            [960, 3],
+            [780, 2],
+            [640, 2],
+            [320, 1],
+          ]"
+          class="indexpage__courses"
+        >
+          <slide>
+            <Course />
+          </slide>
+          <slide>
+            <Course />
+          </slide>
+          <slide>
+            <Course />
+          </slide>
+          <slide>
+            <Course />
+          </slide>
+          <slide>
+            <Course />
+          </slide>
+          <slide>
+            <Course />
+          </slide>
+        </carousel>
+      </client-only>
+    </div>
+
+    <div class="indexpage__coin">
+      <div class="card">
+        <img
+          src="~/assets/images/bitcoin.svg"
+          alt="bitcoin-image"
+          class="img"
+          width="100"
+          height="100"
         />
+        <h3>Bitcoin</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          maximus libero in dapibus consequat.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="~/assets/images/bitcoin.svg"
+          alt="bitcoin-image"
+          class="img"
+          width="100"
+          height="100"
+        />
+        <h3>Bitcoin</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          maximus libero in dapibus consequat.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="~/assets/images/bitcoin.svg"
+          alt="bitcoin-image"
+          class="img"
+          width="100"
+          height="100"
+        />
+        <h3>Bitcoin</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          maximus libero in dapibus consequat.
+        </p>
+      </div>
+
+      <div class="card">
+        <img
+          src="~/assets/images/bitcoin.svg"
+          alt="bitcoin-image"
+          class="img"
+          width="100"
+          height="100"
+        />
+        <h3>Bitcoin</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          maximus libero in dapibus consequat.
+        </p>
       </div>
     </div>
 
@@ -187,6 +276,7 @@ export default {
     "glossary-card": () => import("~/components/cards/glossary"),
     "measurable-value": () => import("~/components/measurableValue"),
     testimonial: () => import("~/components/testimonial"),
+    headingtext: () => import("~/components/utilities/headingtext.vue"),
   },
   data() {
     return {};

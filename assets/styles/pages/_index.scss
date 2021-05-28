@@ -176,6 +176,15 @@
       padding: $spacer-4;
     }
   }
+  .course-container {
+    width: 100%;
+    min-height: 650px;
+    background-color: $gray-80;
+
+    @include bp-sm {
+      min-height: 580px;
+    }
+  }
   &__separate {
     width: 80%;
     padding: $spacer-8;
@@ -183,47 +192,69 @@
 
     @include bp-sm {
       padding: $spacer-2;
+      width: 100%;
     }
   }
-  &__courses {
-    min-height: 200px;
-    @include flexbox;
-    @include justify-content(center);
-    @include flex-direction(column);
-    @include align-items(center);
-    h1 {
-      align-items: flex-start;
-      position: relative;
-      text-align: center;
-      margin-bottom: $spacer-5;
-      font-weight: bold;
-      color: $secondary;
 
-      &::after {
-        position: absolute;
-        content: "";
-        background-color: $secondary;
-        margin: auto;
-        height: 4px;
-        width: 50%;
-        width: 50px;
-        margin: auto;
-        bottom: -4px;
-        left: 0;
-        right: 0;
+  &__courses {
+    margin-bottom: $spacer-10;
+    margin-top: $spacer-4;
+    margin-left: 10px;
+    margin-right: 10px;
+    .VueCarousel-navigation-next[data-v-453ad8cd],
+    .VueCarousel-navigation-prev[data-v-453ad8cd] {
+      margin-right: 65px;
+      background: $white;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .VueCarousel-navigation-prev[data-v-453ad8cd] {
+      margin-left: 65px;
+    }
+  }
+
+  &__coin {
+    width: 100%;
+    min-height: 500px;
+    background-color: $white;
+    // background-color: $gray-50;
+    overflow-y: scroll;
+
+    padding: $spacer-5;
+    @include d-flex-center(center, center, center, wrap);
+
+    .card {
+      width: 300px;
+      min-height: 330px;
+      background-color: $white;
+      padding: $spacer-3;
+      @include b-shadow-primary;
+      border-radius: 8px;
+      margin: $spacer-4;
+      @include d-flex-center(center, center, column);
+
+      // img {
+      //   @include b-shadow-primary;
+      // }
+
+      h3 {
+        margin: $spacer-5 0;
+        font-weight: $w-600;
+      }
+
+      p {
+        text-align: center;
+        font-weight: $w-400;
       }
     }
-    &--container {
-      @include flexbox;
-      @include justify-content(center);
-      width: 100%;
-      min-height: 300px;
-      padding: $spacer-3;
-    }
-    &--pagination {
-      margin: $spacer-3 0;
-    }
   }
+
   &__categories {
     background-color: $gray-600;
     width: 100%;

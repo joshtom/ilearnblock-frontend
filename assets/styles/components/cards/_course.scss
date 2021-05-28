@@ -1,14 +1,17 @@
 .course__card {
   background-color: $white;
   min-height: 300px;
-  width: 270px;
-  border-radius: 12px;
+  width: 250px;
+  border-radius: 8px;
   @include b-shadow-primary;
+
+  @include bp-sm {
+    width: 270px;
+  }
   &--header {
-    background-color: blue;
-    border-radius: 12px;
+    // border-radius: 12px;
     width: 100%;
-    height: 200px;
+    height: 180px;
   }
   &--body {
     padding: $spacer-4;
