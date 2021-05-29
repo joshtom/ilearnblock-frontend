@@ -142,9 +142,11 @@
     border-top-right-radius: 50px;
     min-height: 350px;
     padding: $spacer-9 $spacer-10 $spacer-2 $spacer-10;
-    // @include flexbox;
-    // @include justify-content(center);
-    // @include align-items(center);
+
+    @include bp-sm {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
     .a-row {
       background-color: white;
       width: 100%;
@@ -174,6 +176,10 @@
         font-weight: $w-900;
         margin-left: $spacer-2;
         color: $secondaryLight;
+      }
+
+      @include bp-sm {
+        margin-top: $spacer-5;
       }
     }
 
