@@ -35,15 +35,11 @@
     .about {
       @include d-flex-center;
       padding: $spacer-10;
-      height: 600px;
+      min-height: 600px;
       .col {
         &:nth-child(1) {
           width: 400px;
           height: 400px;
-          //   background-color: $white;
-          //   @include b-shadow-primary;
-          //   padding-top: $spacer-1;
-          //   padding-bottom: $spacer-1;
         }
         &:nth-child(2) {
           flex-basis: 40%;
@@ -57,11 +53,23 @@
       @include bp-sm {
         @include flex-wrap(wrap);
         @include flex-direction(column-reverse);
+
+        padding: $spacer-10 $spacer-5;
+        .col {
+          &:nth-child(1) {
+            width: 90%;
+            height: 90%;
+            margin-top: $spacer-3;
+          }
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+        }
       }
     }
     .mission {
       background-color: $gray-80;
-      height: 600px;
+      min-height: 600px;
       padding: $spacer-10;
       @include d-flex-center;
       position: relative;
@@ -76,18 +84,42 @@
       .col {
         &:nth-child(1) {
           flex-basis: 40%;
+          margin-right: $spacer-6;
         }
         &:nth-child(2) {
           width: 400px;
           height: 400px;
         }
       }
+
+      @include bp-sm {
+        @include flex-wrap(wrap);
+        @include flex-direction(column-reverse);
+
+        padding: $spacer-10 $spacer-5;
+        .col {
+          &:nth-child(1) {
+            margin-right: 0;
+          }
+          &:nth-child(2) {
+            width: 90%;
+            height: 90%;
+            margin-bottom: $spacer-5;
+          }
+        }
+      }
     }
     .services {
       position: relative;
-      height: 500px;
+      min-height: 500px;
       padding: $spacer-10;
       @include d-flex-center(center, center, column);
+
+      @include bp-lg {
+        padding: 0;
+        padding-top: $spacer-10;
+        padding-bottom: $spacer-10;
+      }
 
       .line-text {
         position: absolute;
@@ -138,6 +170,7 @@
     .team {
       padding: $spacer-10 $spacer-4 $spacer-10 $spacer-4;
       @include d-flex-center(center, center, column);
+
       &--title {
         position: relative;
         color: $secondary;
@@ -168,6 +201,10 @@
       .ant-row {
         // background-color: red;
         width: 70%;
+
+        @include bp-sm {
+          width: 100%;
+        }
 
         .card {
           background-color: $white;
