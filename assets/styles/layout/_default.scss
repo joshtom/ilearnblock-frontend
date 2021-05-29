@@ -29,12 +29,59 @@
       @include align-self(stretch);
       @include align-items(center);
 
-      li {
+      li.link {
         color: $dark;
         margin-right: $spacer-3;
         height: 99%;
         @include flexbox;
-        position: relative;
+        // position: relative;
+
+        .dropdown {
+          position: absolute;
+          top: 101px;
+          min-width: 120px;
+          background: black;
+          box-shadow: 0px 1px 10px 0px $primary;
+          border-radius: 6px;
+          list-style-type: none;
+          padding: 0 $spacer-3;
+          display: none;
+          li {
+            margin: $spacer-3 0;
+          }
+        }
+        // Display corresponding dropdowns on hover
+        &.company {
+          &:hover {
+            .company-dropdown {
+              display: block;
+            }
+          }
+        }
+
+        &.education {
+          &:hover {
+            .education-dropdown {
+              display: block;
+            }
+          }
+        }
+
+        &.community {
+          &:hover {
+            .community-dropdown {
+              display: block;
+            }
+          }
+        }
+
+        &.service {
+          &:hover {
+            .service-dropdown {
+              display: block;
+            }
+          }
+        }
 
         & > * {
           margin: auto;

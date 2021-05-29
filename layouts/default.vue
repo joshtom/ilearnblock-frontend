@@ -16,17 +16,45 @@
         <li class="link" :class="{ active: subIsActive('/skills') }">
           <nuxt-link to="/skills">Skills</nuxt-link>
         </li>
-        <li class="link" :class="{ active: subIsActive('/company') }">
+        <li class="link company" :class="{ active: subIsActive('/company') }">
           <nuxt-link to="/company">Company</nuxt-link>
+          <ul class="company-dropdown dropdown">
+            <li><nuxt-link to="/about"> About Us </nuxt-link></li>
+            <li><nuxt-link to="/about"> Career </nuxt-link></li>
+            <li><nuxt-link to="/about"> Blog </nuxt-link></li>
+            <li><nuxt-link to="/about"> Help Center </nuxt-link></li>
+          </ul>
         </li>
-        <li class="link" :class="{ active: subIsActive('/education') }">
+        <li
+          class="link education"
+          :class="{ active: subIsActive('/education') }"
+        >
           <nuxt-link to="/education">Education</nuxt-link>
+
+          <ul class="education-dropdown dropdown">
+            <li><nuxt-link to="/about"> Courses </nuxt-link></li>
+            <li><nuxt-link to="/about"> Glocery </nuxt-link></li>
+          </ul>
         </li>
-        <li class="link" :class="{ active: subIsActive('/community') }">
-          <nuxt-link to="/community">Community</nuxt-link>
+        <li
+          class="link community"
+          :class="{ active: subIsActive('/community') }"
+        >
+          <nuxt-link to="/community">Community</nuxt-link>'
+
+          <ul class="community-dropdown dropdown">
+            <li><nuxt-link to="/about"> Ask Community </nuxt-link></li>
+            <li><nuxt-link to="/about"> Join Community </nuxt-link></li>
+          </ul>
         </li>
-        <li class="link" :class="{ active: subIsActive('/service') }">
+        <li class="link service" :class="{ active: subIsActive('/service') }">
           <nuxt-link to="/service">Service</nuxt-link>
+
+          <ul class="service-dropdown dropdown">
+            <li><nuxt-link to="/about"> Training </nuxt-link></li>
+            <li><nuxt-link to="/about"> Trade Cryptocurrency </nuxt-link></li>
+            <li><nuxt-link to="/about"> Investment </nuxt-link></li>
+          </ul>
         </li>
       </ul>
       <div class="ctaBtn">
