@@ -1,0 +1,11 @@
+.search-modal {
+  .modal-label {
+    background-color: red;
+    height: 500px;
+    width: 100%;
+  }
+  .modal-label > div.ant-modal {
+    top: 10px !important;
+    background-color: black !important;
+  }
+}

@@ -9,7 +9,8 @@ import {
   Input,
   Checkbox,
   Rate,
-  Carousel
+  Carousel,
+  Modal
 } from "ant-design-vue";
 
 Vue.use(Button);
@@ -22,3 +23,4 @@ Vue.use(Input);
 Vue.use(Checkbox);
 Vue.use(Rate);
 Vue.use(Carousel);
+Vue.use(Modal);

@@ -1,5 +1,6 @@
 <template>
   <div class="default-layout">
+    <search ref="search" />
     <header>
       <div class="logo">
         <nuxt-link to="/">
@@ -9,7 +10,9 @@
             width="47px"
             height="47px"
           />
-          <h1><span class="text-primary">I</span>LearnBlock</h1>
+          <h1 class="logo--text">
+            <span class="text-primary">I</span>LearnBlock
+          </h1>
         </nuxt-link>
       </div>
       <ul class="links">
@@ -58,6 +61,14 @@
         </li>
       </ul>
       <div class="ctaBtn">
+        <img
+          src="~/assets/icons/search.svg"
+          alt="search-icon"
+          class="ctaBtn--search"
+          width="20"
+          height="20"
+          @click="searchModal"
+        />
         <nuxt-link to="/login" class="ctaBtn--login text-primary text-bold">
           Sign In</nuxt-link
         >
@@ -158,6 +169,9 @@
 
 <script>
 export default {
+  components: {
+    search: () => import("~/components/modals/search.vue"),
+  },
   methods: {
     subIsActive(input) {
       // return this.$route.path.includes(input);
@@ -165,6 +179,9 @@ export default {
       return paths.some((path) => {
         return this.$route.path.indexOf(path) === 0; // current path starts with this path string
       });
+    },
+    searchModal() {
+      this.$refs.search.showModal();
     },
   },
   computed: {

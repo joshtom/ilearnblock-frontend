@@ -22,6 +22,11 @@
         margin-left: $spacer-2;
         color: $secondaryLight;
       }
+      &--text {
+        @include bp-sm {
+          display: none;
+        }
+      }
     }
     .links {
       @include flexbox;
@@ -106,11 +111,15 @@
           }
         }
       }
-      @include bp-sm {
+      @include bp-md {
         display: none;
       }
     }
     .ctaBtn {
+      &--search {
+        margin-right: $spacer-4;
+        cursor: pointer;
+      }
       &--register {
         background-color: $primary;
         color: $white;
