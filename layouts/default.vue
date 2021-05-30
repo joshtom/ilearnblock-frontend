@@ -23,9 +23,8 @@
           <nuxt-link to="/company">Company</nuxt-link>
           <ul class="company-dropdown dropdown">
             <li><nuxt-link to="/about"> About Us </nuxt-link></li>
-            <li><nuxt-link to="/about"> Career </nuxt-link></li>
-            <li><nuxt-link to="/about"> Blog </nuxt-link></li>
-            <li><nuxt-link to="/about"> Help Center </nuxt-link></li>
+            <li><nuxt-link to="/blog"> Blog </nuxt-link></li>
+            <li><nuxt-link to="/contact"> Help Center </nuxt-link></li>
           </ul>
         </li>
         <li
@@ -35,11 +34,11 @@
           <nuxt-link to="/education">Education</nuxt-link>
 
           <ul class="education-dropdown dropdown">
-            <li><nuxt-link to="/about"> Courses </nuxt-link></li>
-            <li><nuxt-link to="/about"> Glocery </nuxt-link></li>
+            <li><nuxt-link to="/course"> Courses </nuxt-link></li>
+            <li><nuxt-link to="/glossary"> Glossary </nuxt-link></li>
           </ul>
         </li>
-        <li
+        <!-- <li
           class="link community"
           :class="{ active: subIsActive('/community') }"
         >
@@ -49,14 +48,14 @@
             <li><nuxt-link to="/about"> Ask Community </nuxt-link></li>
             <li><nuxt-link to="/about"> Join Community </nuxt-link></li>
           </ul>
-        </li>
+        </li> -->
         <li class="link service" :class="{ active: subIsActive('/service') }">
           <nuxt-link to="/service">Service</nuxt-link>
 
           <ul class="service-dropdown dropdown">
-            <li><nuxt-link to="/about"> Training </nuxt-link></li>
-            <li><nuxt-link to="/about"> Trade Cryptocurrency </nuxt-link></li>
-            <li><nuxt-link to="/about"> Investment </nuxt-link></li>
+            <li><nuxt-link to="/training"> Training </nuxt-link></li>
+            <li><nuxt-link to="/trade"> Trade Cryptocurrency </nuxt-link></li>
+            <li><nuxt-link to="/investment"> Investment </nuxt-link></li>
           </ul>
         </li>
       </ul>
@@ -120,8 +119,8 @@
             <h3>Company</h3>
             <div class="footer--link-content">
               <nuxt-link to="/about"> About Us </nuxt-link>
-              <nuxt-link to="/forum"> Blog </nuxt-link>
-              <nuxt-link to="/help-center"> Help Center </nuxt-link>
+              <nuxt-link to="/blog"> Blog </nuxt-link>
+              <nuxt-link to="/contact"> Help Center </nuxt-link>
             </div>
           </div>
         </a-col>
@@ -131,7 +130,7 @@
             <div class="footer--link-content">
               <nuxt-link to="/courses"> Courses </nuxt-link>
               <nuxt-link to="/learn"> ILB Learn </nuxt-link>
-              <nuxt-link to="/glocery"> Glocery </nuxt-link>
+              <nuxt-link to="/glocery"> Glossary </nuxt-link>
               <nuxt-link to="/contact"> Request a course </nuxt-link>
             </div>
           </div>
