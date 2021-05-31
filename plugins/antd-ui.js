@@ -13,6 +13,8 @@ import {
   Modal
 } from "ant-design-vue";
 
+import { SearchOutline } from "@ant-design/icons";
+
 Vue.use(Button);
 Vue.use(Row);
 Vue.use(Col);
@@ -24,3 +26,6 @@ Vue.use(Checkbox);
 Vue.use(Rate);
 Vue.use(Carousel);
 Vue.use(Modal);
+
+// Icons component
+Vue.use(SearchOutline);

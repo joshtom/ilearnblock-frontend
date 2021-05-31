@@ -1,8 +1,14 @@
 .search-modal {
+  background-color: red;
   .modal-label {
     background-color: red;
     height: 500px;
     width: 100%;
+
+    .ant-modal-body {
+      background-color: red !important;
+      padding-top: 0 !important;
+    }
   }
   .modal-label > div.ant-modal {
     top: 10px !important;
