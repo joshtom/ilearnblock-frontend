@@ -77,8 +77,9 @@
     &--main {
       background-color: pink;
       background-color: white;
-      width: 75%;
+      width: 78%;
       height: 100%;
+      padding: 0 $spacer-4;
       margin-left: auto;
 
       @include bp-sm {

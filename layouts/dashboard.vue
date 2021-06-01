@@ -35,23 +35,23 @@ export default {
       tabs: [
         {
           name: "My Courses",
-          route: "/courses",
+          route: "/dashboard/courses",
         },
         {
           name: "History",
-          route: "/history",
+          route: "/dashboard/history",
         },
         {
           name: "Edit Profile",
-          route: "/edit-profile",
+          route: "/dashboard/edit-profile",
         },
         {
-          name: "Update Profile",
-          route: "/update-profile",
+          name: "Update Password",
+          route: "/dashboard/update-password",
         },
         {
           name: "Notification",
-          route: "/notification",
+          route: "/dashboard/notification",
         },
         {
           name: "Logout",
