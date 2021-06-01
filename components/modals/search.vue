@@ -81,7 +81,7 @@ export default {
   .ant-input {
     position: relative;
     background: #181818;
-    height: 80px;
+    height: 100px;
     padding-left: 2.4rem;
 
     &:focus,
@@ -101,8 +101,11 @@ export default {
       }
     }
     .ant-modal-content {
+      .ant-modal-close-x {
+        font-size: 22px;
+      }
       .ant-modal-close {
-        top: 11px;
+        top: 23px;
         right: 30px;
         color: white;
         @media screen and (max-width: 640px) {
