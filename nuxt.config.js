@@ -37,8 +37,13 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    "@nuxt/image"
   ],
+
+  image: {
+    dir: "assets/images"
+  },
 
   generate: {
     fallback: true

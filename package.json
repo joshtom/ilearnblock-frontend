@@ -17,6 +17,7 @@
     "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.4.13",
     "fibers": "^5.0.0",
     "sass": "^1.32.12",
     "sass-loader": "10"
