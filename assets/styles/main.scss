@@ -14,6 +14,7 @@
 // Layout styles
 @import "./layout/default";
 @import "./layout/auth";
+@import "./layout/dashboard";
 
 // Pages styles
 @import "./pages/index";
@@ -32,6 +33,7 @@
 @import "./components/measurable";
 @import "./components/testimonial";
 @import "./components/categories";
+@import "./components/header";
 
 /* Modal Component*/
 @import "./components/modals/search";
