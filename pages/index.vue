@@ -128,7 +128,7 @@
           :navigationEnabled="true"
           :touch-drag="true"
           :per-page-custom="[
-            [1024, 5],
+            [1024, 4],
             [960, 3],
             [780, 2],
             [640, 2],
