@@ -1,0 +1,64 @@
+.courses {
+  &__container {
+    width: 100%;
+    height: auto;
+    margin-top: $spacer-5;
+    padding-left: $spacer-7;
+    padding-right: $spacer-7;
+
+    @include bp-sm {
+      padding-left: $spacer-4;
+      padding-right: $spacer-4;
+    }
+    &--card {
+      @include d-flex-center(space-between, center, row, no-wrap);
+
+      @include bp-md {
+        flex-wrap: wrap;
+      }
+      section.card {
+        @include d-flex-center(center, center, column);
+        width: 200px;
+        min-height: 200px;
+        padding: $spacer-4;
+        margin: $spacer-2;
+        @include b-shadow-primary;
+        border-radius: 4px;
+
+        @include bp-sm {
+          width: 100%;
+        }
+
+        img {
+          margin-bottom: $spacer-3;
+        }
+
+        p {
+          font-weight: bold;
+          text-align: center;
+        }
+        h1 {
+          color: $secondary;
+          font-weight: bold;
+        }
+      }
+    }
+    &--introduction {
+      background-color: $gray-50;
+      margin-top: $spacer-5;
+      h1.title {
+        margin: auto;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+    &--learning {
+      background-color: $gray-50;
+      margin-top: $spacer-5;
+      h1.title {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}

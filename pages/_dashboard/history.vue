@@ -2,7 +2,7 @@
   <div class="history">
     <m-header>
       <template v-slot:title>
-        <h1>History</h1>
+        <h1 class="text-bold">History</h1>
       </template>
       <template v-slot:subtitle>
         <p>All your history here</p>

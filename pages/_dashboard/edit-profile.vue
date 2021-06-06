@@ -2,7 +2,7 @@
   <div class="edit-profile">
     <m-header>
       <template v-slot:title>
-        <h1>Edit Profile</h1>
+        <h1 class="text-bold">Edit Profile</h1>
       </template>
       <template v-slot:subtitle>
         <p>Update your details</p>

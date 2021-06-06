@@ -18,5 +18,6 @@ export default {};
   align-items: center;
   justify-content: center;
   background: #f7f7f7;
+  padding: 0.8rem;
 }
 </style>
