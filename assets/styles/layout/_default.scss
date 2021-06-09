@@ -8,17 +8,18 @@
   footer {
     background-color: $dark;
     width: 100%;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    // border-top-left-radius: 50px;
+    // border-top-right-radius: 50px;
     min-height: 350px;
     padding: $spacer-9 $spacer-10 $spacer-2 $spacer-10;
 
     @include bp-sm {
       padding-left: 2rem;
       padding-right: 2rem;
+      border-radius: 0;
     }
     .a-row {
-      background-color: white;
+      background-color: $white;
       width: 100%;
     }
     .footer--link {
@@ -35,6 +36,11 @@
           word-wrap: break-word;
           &:hover {
             font-weight: bold;
+          }
+        }
+        &.social-icon {
+          a {
+            margin-right: $spacer-3;
           }
         }
       }

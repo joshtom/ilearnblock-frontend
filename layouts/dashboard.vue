@@ -4,7 +4,14 @@
     <div class="dashboard-layout__container">
       <aside class="dashboard-layout__container--sidebar">
         <div class="img">
-          <div class="circle"></div>
+          <div class="circle">
+            <img
+              src="~/assets/images/dash-image.png"
+              alt="dashboard-image"
+              width="100%"
+              height="100%"
+            />
+          </div>
           <h3>Nuel Page</h3>
         </div>
         <!--  -->

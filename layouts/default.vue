@@ -6,7 +6,7 @@
     </div>
     <footer>
       <a-row :gutter="16">
-        <a-col :xs="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 4 }">
+        <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 4 }">
           <div class="footer--link">
             <h3>Quick Links</h3>
             <div class="footer--link-content">
@@ -18,7 +18,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :xs="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 5 }">
+        <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 5 }">
           <div class="footer--link">
             <h3>Contact Us</h3>
             <div class="footer--link-content">
@@ -28,18 +28,32 @@
             </div>
           </div>
         </a-col>
-        <a-col :xs="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 4 }">
+        <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 4 }">
           <div class="footer--link">
             <h3>Follow Us</h3>
-            <div class="footer--link-content">
-              <nuxt-link to="/courses"> Courses </nuxt-link>
-              <nuxt-link to="/learn"> ILB Learn </nuxt-link>
-              <nuxt-link to="/glocery"> Glocery </nuxt-link>
-              <nuxt-link to="/contact"> Request a course </nuxt-link>
+            <div
+              class="footer--link-content social-icon"
+              style="flex-direction: row"
+            >
+              <a href="#">
+                <img src="~/assets/icons/f-facebook.svg" alt="facebook-icon" />
+              </a>
+              <a href="#">
+                <img src="~/assets/icons/f-youtube.svg" alt="youtube-icon" />
+              </a>
+              <a href="#">
+                <img src="~/assets/icons/f-linkedin.svg" alt="linkedin-icon" />
+              </a>
+              <a href="#">
+                <img
+                  src="~/assets/icons/f-instagram.svg"
+                  alt="instagram-icon"
+                />
+              </a>
             </div>
           </div>
         </a-col>
-        <a-col :xs="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 3 }">
+        <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 3 }">
           <div class="footer--link">
             <h3>Company</h3>
             <div class="footer--link-content">
@@ -49,7 +63,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :xs="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 4 }">
+        <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 4 }">
           <div class="footer--link">
             <h3>Education</h3>
             <div class="footer--link-content">
@@ -60,7 +74,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :xs="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 4 }">
+        <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 4 }">
           <div class="footer--link">
             <h3>Services</h3>
             <div class="footer--link-content">
