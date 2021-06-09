@@ -10,10 +10,18 @@ import {
   Checkbox,
   Rate,
   Carousel,
-  Modal
+  Modal,
+  Upload,
+  Spin,
+  Icon
 } from "ant-design-vue";
 
-import { SearchOutline } from "@ant-design/icons";
+import {
+  SearchOutline,
+  PlusCircleFill,
+  PlusCircleTwoTone,
+  PlusOutline
+} from "@ant-design/icons";
 
 Vue.use(Button);
 Vue.use(Row);
@@ -26,6 +34,13 @@ Vue.use(Checkbox);
 Vue.use(Rate);
 Vue.use(Carousel);
 Vue.use(Modal);
+Vue.use(Upload);
+Vue.use(Spin);
+Vue.use(Icon);
 
 // Icons component
 Vue.use(SearchOutline);
+Vue.use(PlusCircleFill);
+
+Vue.use(PlusCircleTwoTone);
+Vue.use(PlusOutline);
