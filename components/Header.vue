@@ -1,7 +1,7 @@
 <template>
-  <div class="header">
+  <div class="header" v-scroll="handleScroll">
     <search ref="search" />
-    <header>
+    <header :class="{ 'scroll-bg': scroll }">
       <div class="logo">
         <nuxt-link to="/">
           <img
@@ -17,21 +17,33 @@
       </div>
       <ul class="links">
         <li class="link" :class="{ active: subIsActive('/skills') }">
-          <nuxt-link to="/skills">Skills</nuxt-link>
+          <nuxt-link to="/skills" :class="{ 'scroll-text': scroll }"
+            >Skills</nuxt-link
+          >
         </li>
         <li class="link company" :class="{ active: subIsActive('/company') }">
-          <nuxt-link to="/company">Company</nuxt-link>
+          <nuxt-link to="/company" :class="{ 'scroll-text': scroll }"
+            >Company</nuxt-link
+          >
           <ul class="company-dropdown dropdown">
-            <li><nuxt-link to="/about"> About Us </nuxt-link></li>
-            <li><nuxt-link to="/blog"> Blog </nuxt-link></li>
-            <li><nuxt-link to="/contact"> Help Center </nuxt-link></li>
+            <li>
+              <nuxt-link to="/about"> About Us </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/blog"> Blog </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/contact"> Help Center </nuxt-link>
+            </li>
           </ul>
         </li>
         <li
           class="link education"
           :class="{ active: subIsActive('/education') }"
         >
-          <nuxt-link to="/education">Education</nuxt-link>
+          <nuxt-link to="/education" :class="{ 'scroll-text': scroll }"
+            >Education</nuxt-link
+          >
 
           <ul class="education-dropdown dropdown">
             <li><nuxt-link to="/course"> Courses </nuxt-link></li>
@@ -39,7 +51,9 @@
           </ul>
         </li>
         <li class="link service" :class="{ active: subIsActive('/service') }">
-          <nuxt-link to="/service">Service</nuxt-link>
+          <nuxt-link to="/service" :class="{ 'scroll-text': scroll }"
+            >Service</nuxt-link
+          >
 
           <ul class="service-dropdown dropdown">
             <li><nuxt-link to="/training"> Training </nuxt-link></li>
@@ -56,7 +70,19 @@
           width="20"
           height="20"
           @click="searchModal"
+          v-if="!scroll"
         />
+
+        <img
+          src="~/assets/icons/darkSearch.svg"
+          alt="search-icon"
+          class="ctaBtn--search"
+          width="20"
+          height="20"
+          @click="searchModal"
+          v-else
+        />
+
         <nuxt-link to="/login" class="ctaBtn--login text-primary text-bold">
           Sign In</nuxt-link
         >
@@ -73,9 +99,13 @@ export default {
   components: {
     search: () => import("~/components/modals/search.vue"),
   },
+  data() {
+    return {
+      scroll: false,
+    };
+  },
   methods: {
     subIsActive(input) {
-      // return this.$route.path.includes(input);
       const paths = Array.isArray(input) ? input : [input];
       return paths.some((path) => {
         return this.$route.path.indexOf(path) === 0; // current path starts with this path string
@@ -83,6 +113,15 @@ export default {
     },
     searchModal() {
       this.$refs.search.showModal();
+    },
+
+    handleScroll: function () {
+      if (window.scrollY > 40) {
+        this.scroll = true;
+      } else {
+        this.scroll = false;
+      }
+      // return window.scrollY > 100;
     },
   },
 };

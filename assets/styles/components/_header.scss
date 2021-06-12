@@ -8,6 +8,7 @@
     color: $white;
     padding: 0 $spacer-6;
     z-index: 100;
+    transition: 300ms all cubic-bezier(0.39, 0.575, 0.565, 1);
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
@@ -93,7 +94,7 @@
         }
         &.active {
           &::before {
-            content: "";
+            content: "";
             position: absolute;
             bottom: 0px;
             border-bottom: 3px solid $white;
@@ -116,6 +117,7 @@
       }
     }
     .ctaBtn {
+      @include d-flex-center;
       &--search {
         margin-right: $spacer-4;
         cursor: pointer;
@@ -137,5 +139,16 @@
         }
       }
     }
+  }
+
+  .scroll-bg {
+    background-color: white;
+    border-bottom: 0.4px solid $gray-100;
+    // box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+  }
+  .scroll-text {
+    color: $gray-100;
+    color: black !important;
+    font-weight: 600;
   }
 }

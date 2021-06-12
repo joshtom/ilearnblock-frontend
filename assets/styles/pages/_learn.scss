@@ -4,20 +4,35 @@
     width: 60%;
     margin: auto;
     padding-top: $spacer-10;
+
+    @include bp-sm {
+      padding-top: $spacer-6;
+    }
+
     .img {
       width: 50%;
       height: 300px;
-      //   background-color: yellow;
 
-      //   img {
-      //     width: 100%;
-      //     height: 100%;
-      //   }
+      @include bp-lg {
+        margin-right: $spacer-5;
+      }
     }
     &--text {
-      //   margin-left: $spacer-5;
       width: 50%;
-      //   background-color: red;
+      text-align: justify;
+    }
+
+    @include bp-sm {
+      @include flex-wrap(wrap);
+      width: 87%;
+      .img {
+        width: 100%;
+        margin-bottom: $spacer-4;
+        margin-right: 0;
+      }
+      &--text {
+        width: 100%;
+      }
     }
   }
   &__difficulty {
