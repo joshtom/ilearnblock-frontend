@@ -10,67 +10,73 @@
     >
       <template #closeIcon> <CloseIcon /> </template>
       <div class="mobile-modal-container">
-        <nuxt-link to="/skills" class="menu-link"> Skills </nuxt-link>
-        <a-dropdown>
-          <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
-            <nuxt-link to="/#" class="menu-link">
-              Company <a-icon type="down" />
-            </nuxt-link>
-          </a>
-          <a-menu slot="overlay">
-            <a-menu-item>
-              <nuxt-link to="/about"> About Us </nuxt-link>
-            </a-menu-item>
-            <a-menu-item>
-              <nuxt-link to="/blog"> Blog </nuxt-link>
-            </a-menu-item>
-            <a-menu-item>
-              <nuxt-link to="/contact"> Help Center </nuxt-link>
-            </a-menu-item>
-          </a-menu>
-        </a-dropdown>
-
-        <!-- Education -->
-
-        <a-dropdown>
-          <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
-            <nuxt-link to="/#" class="menu-link">
-              Education <a-icon type="down" />
-            </nuxt-link>
-          </a>
-          <a-menu slot="overlay">
-            <a-menu-item>
-              <nuxt-link to="/course"> Courses </nuxt-link>
-            </a-menu-item>
-            <a-menu-item>
-              <nuxt-link to="/glossary"> Glossary </nuxt-link>
-            </a-menu-item>
-          </a-menu>
-        </a-dropdown>
-
-        <!-- Service -->
-
-        <a-dropdown>
-          <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
-            <nuxt-link to="/#" class="menu-link">
-              Service <a-icon type="down" />
-            </nuxt-link>
-          </a>
-          <a-menu slot="overlay">
-            <a-menu-item>
-              <nuxt-link to="/training"> Training </nuxt-link>
-            </a-menu-item>
-            <a-menu-item>
-              <nuxt-link to="/trade"> Trade Cryptocurrency </nuxt-link>
-            </a-menu-item>
-            <a-menu-item>
-              <nuxt-link to="/investment"> Investment </nuxt-link>
-            </a-menu-item>
-          </a-menu>
-        </a-dropdown>
+        <ul>
+          <li>
+            <nuxt-link to="/skills" class="menu-link"> Skills </nuxt-link>
+          </li>
+          <!-- Education -->
+          <li>
+            <a-dropdown>
+              <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
+                <nuxt-link to="/#" class="menu-link">
+                  Company <a-icon type="down" />
+                </nuxt-link>
+              </a>
+              <a-menu slot="overlay">
+                <a-menu-item>
+                  <nuxt-link to="/about"> About Us </nuxt-link>
+                </a-menu-item>
+                <a-menu-item>
+                  <nuxt-link to="/blog"> Blog </nuxt-link>
+                </a-menu-item>
+                <a-menu-item>
+                  <nuxt-link to="/contact"> Help Center </nuxt-link>
+                </a-menu-item>
+              </a-menu>
+            </a-dropdown>
+          </li>
+          <!-- Service -->
+          <li>
+            <a-dropdown>
+              <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
+                <nuxt-link to="/#" class="menu-link">
+                  Education <a-icon type="down" />
+                </nuxt-link>
+              </a>
+              <a-menu slot="overlay">
+                <a-menu-item>
+                  <nuxt-link to="/course"> Courses </nuxt-link>
+                </a-menu-item>
+                <a-menu-item>
+                  <nuxt-link to="/glossary"> Glossary </nuxt-link>
+                </a-menu-item>
+              </a-menu>
+            </a-dropdown>
+          </li>
+          <li>
+            <a-dropdown>
+              <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
+                <nuxt-link to="/#" class="menu-link">
+                  Service <a-icon type="down" />
+                </nuxt-link>
+              </a>
+              <a-menu slot="overlay">
+                <a-menu-item>
+                  <nuxt-link to="/training"> Training </nuxt-link>
+                </a-menu-item>
+                <a-menu-item>
+                  <nuxt-link to="/trade"> Trade Cryptocurrency </nuxt-link>
+                </a-menu-item>
+                <a-menu-item>
+                  <nuxt-link to="/investment"> Investment </nuxt-link>
+                </a-menu-item>
+              </a-menu>
+            </a-dropdown>
+          </li>
+        </ul>
       </div>
       <div class="footer">
-        <nuxt-link to="/login"> Sign In </nuxt-link>
+        <nuxt-link to="/login"> Sign In <a-icon type="right" /> </nuxt-link>
       </div>
     </a-modal>
   </div>
@@ -113,17 +119,23 @@ export default {
     .mobile-modal-container {
       width: 100%;
       min-height: auto;
-      padding: 0 20px;
+      padding: 0 24px;
+      margin-top: 1rem;
+
+      ul {
+        list-style-type: none;
+        li {
+          margin-bottom: 1.2rem;
+          &:last-child {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
 
       .menu-link {
         color: rgba(0, 0, 0, 0.85);
-        font-size: 20px;
-        // float: right;
-        // clear: both;
-        display: block;
-        width: auto;
+        font-size: 18px;
         margin: 1rem 0;
-        // background: red;
         position: relative;
 
         & > i > svg {
@@ -132,12 +144,32 @@ export default {
       }
     }
     .footer {
-      background: red;
+      background: #ff9100;
+      background: #f7f7f7;
       width: 100%;
-      height: 50px;
+      min-height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 1rem;
+
+      a {
+        padding: 0.5rem 0.9rem;
+        background: #fbbf24;
+        background: #ff9100;
+        color: white;
+        font-size: 14px;
+        border-radius: 16px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          margin-left: 5px;
+        }
+      }
     }
   }
 }
