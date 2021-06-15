@@ -1,6 +1,7 @@
 <template>
   <div class="header" v-scroll="handleScroll">
     <search ref="search" />
+    <mobile ref="mobile" />
     <header :class="{ 'scroll-bg': scroll }">
       <div class="logo">
         <nuxt-link to="/">
@@ -89,6 +90,12 @@
         <nuxt-link to="/register" class="ctaBtn--register">
           Get Started
         </nuxt-link>
+        <!-- Hamburger Menu -->
+        <div class="ctaBtn--hamburger" @click="mobileModal">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </header>
   </div>
@@ -98,6 +105,7 @@
 export default {
   components: {
     search: () => import("~/components/modals/search.vue"),
+    mobile: () => import("~/components/modals/mobile.vue"),
   },
   data() {
     return {
@@ -113,6 +121,9 @@ export default {
     },
     searchModal() {
       this.$refs.search.showModal();
+    },
+    mobileModal() {
+      this.$refs.mobile.showModal();
     },
 
     handleScroll: function () {

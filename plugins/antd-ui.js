@@ -13,7 +13,9 @@ import {
   Modal,
   Upload,
   Spin,
-  Icon
+  Icon,
+  Dropdown,
+  Menu
 } from "ant-design-vue";
 
 import {
@@ -37,6 +39,8 @@ Vue.use(Modal);
 Vue.use(Upload);
 Vue.use(Spin);
 Vue.use(Icon);
+Vue.use(Dropdown);
+Vue.use(Menu);
 
 // Icons component
 Vue.use(SearchOutline);

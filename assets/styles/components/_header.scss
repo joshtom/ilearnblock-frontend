@@ -134,8 +134,37 @@
           background-color: $white;
           color: $primary;
         }
-        @include bp-sm {
+      }
+      &--hamburger {
+        width: 55px;
+        height: 30px;
+        height: auto;
+        padding: 0.6rem 1.1rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        background: #ffa500f7;
+        border-radius: 100px;
+        @include d-flex-center(center, center, column);
+        cursor: pointer;
+        display: none;
+
+        div {
+          width: 70%;
+          height: 2px;
+          background-color: $white;
+          margin: auto;
+          margin-bottom: 3px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      @include bp-sm {
+        &--register,
+        &--login {
           display: none;
+        }
+        &--hamburger {
+          display: block;
         }
       }
     }
