@@ -121,7 +121,7 @@
         <br />
         <headingtext> Courses </headingtext>
         <br />
-        <carousel
+        <!-- <carousel
           :per-page="1"
           :mouse-drag="true"
           :paginationEnabled="false"
@@ -154,11 +154,115 @@
           <slide>
             <Course />
           </slide>
-        </carousel>
+        </carousel> -->
+
+        <swiper class="swiper indexpage__courses" :options="swiperOption">
+          <swiper-slide><Course /></swiper-slide>
+          <swiper-slide><Course /></swiper-slide>
+          <swiper-slide><Course /></swiper-slide>
+          <swiper-slide><Course /></swiper-slide>
+          <swiper-slide><Course /></swiper-slide>
+          <swiper-slide><Course /></swiper-slide>
+          <swiper-slide><Course /></swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-prev"></div>
+          <!-- <div class="arrow-left">
+            <left-arrow />
+          </div>
+          <div class="arrow-right">
+            <right-arrow />
+          </div> -->
+        </swiper>
       </client-only>
     </div>
 
-    <div class="indexpage__coin">
+    <swiper class="swiper indexpage__coin" :options="swiperOption">
+      <swiper-slide>
+        <div class="card">
+          <img
+            src="~/assets/images/bitcoin.svg"
+            alt="bitcoin-image"
+            class="img"
+            width="100"
+            height="100"
+          />
+          <h3>Ethereum</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            maximus libero in dapibus consequat.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="card">
+          <img
+            src="~/assets/images/bitcoin.svg"
+            alt="bitcoin-image"
+            class="img"
+            width="100"
+            height="100"
+          />
+          <h3>Bitcoin</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            maximus libero in dapibus consequat.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="card">
+          <img
+            src="~/assets/images/bitcoin.svg"
+            alt="bitcoin-image"
+            class="img"
+            width="100"
+            height="100"
+          />
+          <h3>Binance</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            maximus libero in dapibus consequat.
+          </p>
+        </div></swiper-slide
+      >
+      <swiper-slide>
+        <div class="card">
+          <img
+            src="~/assets/images/bitcoin.svg"
+            alt="bitcoin-image"
+            class="img"
+            width="100"
+            height="100"
+          />
+          <h3>Dodgecoin</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            maximus libero in dapibus consequat.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="card">
+          <img
+            src="~/assets/images/bitcoin.svg"
+            alt="bitcoin-image"
+            class="img"
+            width="100"
+            height="100"
+          />
+          <h3>Dodgecoin</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            maximus libero in dapibus consequat.
+          </p>
+        </div>
+      </swiper-slide>
+
+      <div class="swiper-button-prev" slot="button-prev"></div>
+      <div class="swiper-button-next" slot="button-prev"></div>
+    </swiper>
+
+    <!-- <div class="indexpage__coin">
       <div class="card">
         <img
           src="~/assets/images/bitcoin.svg"
@@ -218,7 +322,7 @@
           maximus libero in dapibus consequat.
         </p>
       </div>
-    </div>
+    </div> -->
 
     <categories />
 
@@ -228,16 +332,13 @@
         Get latest updates on cryptocurrency in the crypto-space
       </p>
       <div class="indexpage__market--container">
-        <div class="cards">
-          <market-card> </market-card>
-          <market-card> </market-card>
-          <market-card> </market-card>
-        </div>
-        <div class="btn">
-          <nuxt-link to="/more-feedbacks" class="btn-link">
-            View more feedbacks
-          </nuxt-link>
-        </div>
+        <swiper class="swiper cards" :options="marketSwiperOption">
+          <swiper-slide> <market-card> </market-card> </swiper-slide>
+          <swiper-slide> <market-card> </market-card> </swiper-slide>
+          <swiper-slide> <market-card> </market-card> </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-prev"></div>
+        </swiper>
       </div>
     </div>
     <measurable-value> </measurable-value>
@@ -268,6 +369,8 @@
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
 export default {
   components: {
     Linetext: () => import("~/components/utilities/linetext"),
@@ -277,12 +380,88 @@ export default {
     "measurable-value": () => import("~/components/measurableValue"),
     testimonial: () => import("~/components/testimonial"),
     headingtext: () => import("~/components/utilities/headingtext.vue"),
+    "left-arrow": () => import("~/assets/icons/icon-left"),
+    "right-arrow": () => import("~/assets/icons/icon-right"),
+    Swiper,
+    SwiperSlide,
   },
   data() {
-    return {};
+    return {
+      swiperOption: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      },
+      marketSwiperOption: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      },
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.swiperBox {
+  width: 100%;
+  position: relative;
+}
+.swiper_btn {
+  position: absolute;
+}
+.swiper-button-prev {
+  width: 0.36rem;
+  height: 0.28rem;
+  // background: url("path") no-repeat;
+  background-size: 100% 100%;
+}
+.swiper-button-next {
+  width: 0.36rem;
+  height: 0.28rem;
+  // background: url("path") no-repeat;
+  background-size: 100% 100%;
+}
 </style>

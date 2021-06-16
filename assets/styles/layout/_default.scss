@@ -23,8 +23,13 @@
       width: 100%;
     }
     .footer--link {
-      // background-color: red;
       padding: 10px 0;
+      @include bp-md {
+        min-height: 205px;
+      }
+      @include bp-sm {
+        min-height: auto;
+      }
 
       &-content {
         @include flexbox;

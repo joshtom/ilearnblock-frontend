@@ -20,7 +20,7 @@
       <p>4 star</p>
       <div class="footer">
         <nuxt-link to="/learn">
-          <Button class="btn-primary">Take Course</Button>
+          <Button class="btn-primary"> Enroll</Button>
         </nuxt-link>
         <Button class="btn-success">Free</Button>
       </div>
