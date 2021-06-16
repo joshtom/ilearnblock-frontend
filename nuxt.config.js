@@ -26,7 +26,11 @@ export default {
   css: ["ant-design-vue/dist/antd.css", "@/assets/styles/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/antd-ui", { src: "@/plugins/vue-carousel", ssr: false }],
+  plugins: [
+    "@/plugins/antd-ui",
+    { src: "@/plugins/vue-carousel", ssr: false },
+    "@/plugins/scroll"
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -67,8 +71,7 @@ export default {
               style: true
             },
             "ant-design-vue"
-          ]
-          // ["@babel/plugin-proposal-private-methods", { loose: true }]
+          ][("@babel/plugin-proposal-private-methods", { loose: true })]
         ]
       }
     }

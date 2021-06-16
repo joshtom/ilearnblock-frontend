@@ -34,11 +34,13 @@
     </a-modal>
   </div>
 </template>
+
 <script>
 export default {
   beforeCreate() {
     this.form = this.$form.createForm(this, { name: "login" });
   },
+  components: {},
   data() {
     return {
       visible: false,

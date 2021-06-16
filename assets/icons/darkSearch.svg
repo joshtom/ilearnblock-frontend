@@ -1,4 +1,4 @@
- <svg
+   <svg
       xmlns="http://www.w3.org/2000/svg"
       width="25.036"
       height="25.036"
@@ -8,7 +8,7 @@
         <style>
           .a {
             fill: none;
-            stroke: #fff;
+            stroke: #000;
             stroke-linecap: round;
             stroke-linejoin: round;
             stroke-width: 3px;
