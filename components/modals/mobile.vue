@@ -14,7 +14,7 @@
           <li>
             <nuxt-link to="/skills" class="menu-link"> Skills </nuxt-link>
           </li>
-          <!-- Education -->
+          <!-- Company -->
           <li>
             <a-dropdown>
               <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
@@ -35,7 +35,7 @@
               </a-menu>
             </a-dropdown>
           </li>
-          <!-- Service -->
+          <!-- Education -->
           <li>
             <a-dropdown>
               <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
@@ -53,6 +53,7 @@
               </a-menu>
             </a-dropdown>
           </li>
+          <!-- Service -->
           <li>
             <a-dropdown>
               <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">

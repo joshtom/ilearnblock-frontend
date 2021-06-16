@@ -1,23 +1,55 @@
 <template>
   <div class="cat">
     <div class="cat__categories">
-      <linetext bg="#141519" line="#767679">
+      <linetext bg="#f7f7f7" line="#eaeaea">
         <img src="~/assets/images/logo2.png" alt="" width="70" height="70" />
       </linetext>
-      <h1 class="text-white">Categories</h1>
+      <h1 class="text-secondary">Categories</h1>
       <div class="cat__categories--container">
-        <categories-card v-for="cat of getCategory" :key="cat.title">
-          {{ cat.title }}
-        </categories-card>
+        <a-row :gutter="[16, 32]">
+          <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+            <section class="card">
+              <div class="rectangle"></div>
+              <p>Cryptography</p>
+            </section>
+          </a-col>
+
+          <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+            <section class="card">
+              <div class="rectangle"></div>
+              <p>Community Management</p>
+            </section>
+          </a-col>
+
+          <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+            <section class="card">
+              <div class="rectangle"></div>
+              <p>Blockchain Development</p>
+            </section>
+          </a-col>
+
+          <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+            <section class="card">
+              <div class="rectangle"></div>
+              <p>Token e-commerce</p>
+            </section>
+          </a-col>
+
+          <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+            <section class="card">
+              <div class="rectangle"></div>
+              <p>Crypto currency trading</p>
+            </section>
+          </a-col>
+
+          <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+            <section class="card">
+              <div class="rectangle"></div>
+              <p>Technical Analysis</p>
+            </section>
+          </a-col>
+        </a-row>
       </div>
-      <a-pagination
-        v-model="current"
-        :defaultCurrent="3"
-        :total="category.length"
-        :defaultPageSize="3"
-        show-less-items
-        @change="onChange"
-      />
     </div>
   </div>
 </template>

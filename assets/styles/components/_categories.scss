@@ -1,12 +1,15 @@
 .cat {
   &__categories {
-    background-color: $gray-600;
+    background-color: $gray-80;
     width: 100%;
     min-height: 300px;
     padding: $spacer-5 $spacer-10;
+
+    @include bp-sm {
+      padding: $spacer-3;
+    }
     h1 {
       position: relative;
-      color: $white;
       font-weight: bold;
       text-align: center;
       margin-top: $spacer-10;
@@ -14,7 +17,7 @@
       &::after {
         position: absolute;
         content: "";
-        background-color: $white;
+        background-color: $secondary;
         margin: auto;
         height: 4px;
         width: 50px;
@@ -28,13 +31,37 @@
       margin-top: $spacer-6;
       min-height: 90px;
       width: 100%;
-      @include flexbox;
-      @include justify-content(center);
-      @include flex-wrap(wrap);
+      // @include flexbox;
+      // @include justify-content(center);
+      // @include flex-wrap(wrap);
     }
-    .ant-pagination {
-      text-align: center;
-      margin-top: 1rem;
+
+    .card {
+      min-height: 210px;
+      .rectangle {
+        background-color: $primary;
+        height: 300px;
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: $spacer-3;
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-8px);
+        }
+
+        @include bp-sm {
+          height: 150px;
+        }
+      }
+      p {
+        font-weight: bold;
+      }
     }
+    // .ant-pagination {
+    //   text-align: center;
+    //   margin-top: 1rem;
+    // }
   }
 }
