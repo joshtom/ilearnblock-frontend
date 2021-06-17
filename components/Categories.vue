@@ -9,42 +9,84 @@
         <a-row :gutter="[16, 32]">
           <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
             <section class="card">
-              <div class="rectangle"></div>
+              <div class="rectangle">
+                <img
+                  src="~/assets/images/cryptography.png"
+                  alt="cryptography"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
               <p>Cryptography</p>
             </section>
           </a-col>
 
           <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
             <section class="card">
-              <div class="rectangle"></div>
+              <div class="rectangle">
+                <img
+                  src="~/assets/images/cm.png"
+                  alt="cryptography"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
               <p>Community Management</p>
             </section>
           </a-col>
 
           <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
             <section class="card">
-              <div class="rectangle"></div>
+              <div class="rectangle">
+                <img
+                  src="~/assets/images/bd.png"
+                  alt="cryptography"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
               <p>Blockchain Development</p>
             </section>
           </a-col>
 
           <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
             <section class="card">
-              <div class="rectangle"></div>
+              <div class="rectangle">
+                <img
+                  src="~/assets/images/tc.png"
+                  alt="cryptography"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
               <p>Token e-commerce</p>
             </section>
           </a-col>
 
           <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
             <section class="card">
-              <div class="rectangle"></div>
+              <div class="rectangle">
+                <img
+                  src="~/assets/images/cc.png"
+                  alt="cryptography"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
               <p>Crypto currency trading</p>
             </section>
           </a-col>
 
           <a-col :xs="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
             <section class="card">
-              <div class="rectangle"></div>
+              <div class="rectangle">
+                <img
+                  src="~/assets/images/ta.png"
+                  alt="cryptography"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
               <p>Technical Analysis</p>
             </section>
           </a-col>

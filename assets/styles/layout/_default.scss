@@ -28,7 +28,7 @@
         min-height: 205px;
       }
       @include bp-sm {
-        min-height: auto;
+        min-height: 150px;
       }
 
       &-content {

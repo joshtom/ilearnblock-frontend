@@ -22,9 +22,33 @@
           <div class="footer--link">
             <h3>Contact Us</h3>
             <div class="footer--link-content">
-              <nuxt-link to="/#"> +(234) 813-0000-1111 </nuxt-link>
-              <nuxt-link to="/#"> Lorem Ipsum, Akure, Ondo state. </nuxt-link>
-              <nuxt-link to="/#"> loremipsum@mail.com </nuxt-link>
+              <nuxt-link to="/#">
+                <img
+                  src="~/assets/icons/f-contact.svg"
+                  alt="contact"
+                  width="14"
+                  height="14"
+                />
+                +(234) 813-0000-1111
+              </nuxt-link>
+              <nuxt-link to="/#">
+                <img
+                  src="~/assets/icons/f-location.svg"
+                  alt="address"
+                  width="14"
+                  height="14"
+                />
+                Lorem Ipsum, Akure, Ondo state.
+              </nuxt-link>
+              <nuxt-link to="/#">
+                <img
+                  src="~/assets/icons/f-mail.svg"
+                  alt="mail"
+                  width="14"
+                  height="14"
+                />
+                loremipsum@mail.com
+              </nuxt-link>
             </div>
           </div>
         </a-col>

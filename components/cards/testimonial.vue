@@ -5,7 +5,14 @@
       typesetting, remaining essentially unchanged. It was popularized in the...
     </p>
     <div class="testimonial-card--info">
-      <div class="img"></div>
+      <div class="img">
+        <img
+          src="~/assets/images/testimonial.png"
+          alt="testimonial-image"
+          width="100%"
+          height="100%"
+        />
+      </div>
       <p>Amanda Jackson</p>
       <h2>ui / ux</h2>
       <b>Lagos</b>
