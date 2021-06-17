@@ -2,15 +2,10 @@
   background-color: $white;
   min-height: 300px;
   width: 300px;
-  // width: 100%;
   border-radius: 8px;
   @include b-shadow-primary;
 
-  // @include bp-md {
-  //   // width: 100%;
-  // }
   &--header {
-    // border-radius: 12px;
     width: 100%;
     height: 200px;
 
@@ -28,11 +23,22 @@
       @include justify-content(space-between);
       margin: $spacer-3 0;
 
+      .course-type--duration {
+        @include flexbox;
+        color: $gray-600;
+        svg {
+          margin-right: $spacer-2;
+        }
+      }
+
       button {
         &:nth-child(1) {
           margin-right: 10px;
         }
       }
+    }
+    .text-star-rating {
+      color: #fbca44;
     }
   }
 }

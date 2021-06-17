@@ -75,6 +75,9 @@
 .ant-rate {
   color: #fbca44;
 }
+.ant-rate-star:not(:last-child) {
+  margin-right: 4px;
+}
 
 .ant-tooltip {
   max-width: 300px;

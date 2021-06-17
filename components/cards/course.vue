@@ -15,9 +15,12 @@
           <p></p>
           Beginner</a-tag
         >
-        <p>5 min</p>
+        <p class="course-type--duration"><time-icon /> 5m</p>
       </div>
-      <p>4 star</p>
+      <p class="text-bold text-star-rating">
+        4.0
+        <a-rate v-model="value" class="star-rating" :count="5" />
+      </p>
       <div class="footer">
         <nuxt-link to="/learn">
           <Button class="btn-primary"> Enroll</Button>
@@ -29,7 +32,17 @@
 </template>
 
 <script>
-export default {};
+import TimeIcon from "~/assets/icons/timeIcon.vue";
+export default {
+  components: {
+    TimeIcon,
+  },
+  data() {
+    return {
+      value: 4,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
